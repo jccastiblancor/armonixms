@@ -1,0 +1,106 @@
+/* ---------- top ticker ---------- */
+.ticker-top{
+    display: flex;
+    flex-direction: row;
+    background: var(--near-black);
+    color: var(--cream-2);
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+}
+.ticker-text{
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.ticker-text-end{
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.site-header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(239,227,200,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(36,27,20,0.08);
+}
+.header-inner{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0.9rem var(--pad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.logo{
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+.main-nav{ display: flex; gap: 1.8rem;}
+.main-nav a{
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    transition: color 0.2s ease;
+}
+.main-nav a:hover{ color: var(--rust-deep); }
+.nav-toggle{
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+.nav-toggle span{ width: 20px; height: 2px; background: var(--ink); display: block; }
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px){
+    .ticker-text{ display: none; }
+    .main-nav{ display: none; }
+    .nav-toggle{ display: flex; }
+}
+
+@media (max-width: 560px){
+    .header-inner{ padding: 0.75rem var(--pad); }
+}
+
+/* mobile nav open state */
+body.nav-open .main-nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; right: 0;
+    height: 100vh;
+    width: min(78vw, 320px);
+    background: var(--cream);
+    padding: 5.5rem 2rem 2rem;
+    gap: 1.5rem;
+    box-shadow: -8px 0 24px rgba(0,0,0,0.15);
+    z-index: 60;
+}
+body.nav-open .main-nav a{ font-size: 1.1rem; }
