@@ -250,7 +250,7 @@ button, input, select, textarea{ font-family: inherit; font-size: inherit; color
     display: flex;
     align-items: flex-end;
     padding: clamp(2.5rem, 6vw, 4.5rem) var(--pad);
-    background-image: url(img/encuentra.jpg);
+    background-image: url(https://armonixms.com/img/encuentra.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
