@@ -49,11 +49,18 @@
     gap: 1.5rem;
 }
 .logo{
-    font-family: var(--font-display);
-    font-size: 1.35rem;
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: -0.01em;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+}
+.logo-img{
+    display: block;
+    height: 28px;
+    width: auto;
+    aspect-ratio: 240 / 60;   /* use your viewBox width / height */
+}
+.hero-content .logo-img{
+    height: clamp(48px, 8vw, 96px);
 }
 .main-nav{ display: flex; gap: 1.8rem;}
 .main-nav a{
