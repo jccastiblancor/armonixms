@@ -82,6 +82,32 @@
 .nav-toggle span{ width: 20px; height: 2px; background: var(--ink); display: block; }
 
 
+.nav-close{
+    display: none;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--ink);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-close:hover{ color: var(--rust-deep); }
+
+body.nav-open .nav-close{ display: flex; }
+
+/* backdrop-filter makes the header the containing block for
+   position:fixed children, which breaks the full-height panel */
+body.nav-open .site-header{
+    backdrop-filter: none;
+}
+
 
 /* =========================================================
    RESPONSIVE

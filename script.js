@@ -1,21 +1,22 @@
 // ---------- mobile nav toggle ----------
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
+const navClose  = document.getElementById('navClose');
 
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        const isOpen = document.body.classList.toggle('nav-open');
-        navToggle.setAttribute('aria-expanded', String(isOpen));
-    });
 
-    mainNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.body.classList.remove('nav-open');
-            navToggle.setAttribute('aria-expanded', 'false');
-        });
-    });
+function setNav(open){
+    document.body.classList.toggle('nav-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
 }
 
+navToggle.addEventListener('click', () => setNav(!document.body.classList.contains('nav-open')));
+navClose.addEventListener('click', () => setNav(false));
+
+// close when a link is tapped (otherwise the panel stays open after jumping to a section)
+mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+
+// close with Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setNav(false); });
 
 // --------------- hero carousel images -----------------
 
