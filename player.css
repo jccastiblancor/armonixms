@@ -163,16 +163,7 @@
 }
 
 .track-list{ list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
-.track{
-    display: grid;
-    grid-template-columns: 2.5rem 1fr auto auto 2.75rem;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.9rem 1.1rem;
-    background: rgba(27,22,17,0.14);
-    border-radius: 10px;
-    transition: background 0.2s ease;
-}
+
 .track:hover{ background: rgba(27,22,17,0.24); }
 .track.is-active{ background: rgba(27,22,17,0.34); }
 .track-num{ font-size: 0.8rem; opacity: 0.65; font-variant-numeric: tabular-nums; }
