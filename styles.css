@@ -225,6 +225,8 @@ button, input, select, textarea{ font-family: inherit; font-size: inherit; color
     min-height: 360px;
     border-radius: 10px;
     max-width: 40%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 .para-copy{
     display: flex;
@@ -320,7 +322,13 @@ button, input, select, textarea{ font-family: inherit; font-size: inherit; color
     max-width: var(--max);
     margin: 0 auto;
 }
-.bio-media{ border-radius: 10px; min-height: 320px; }
+.bio-media{
+    border-radius: 10px;
+    min-height: 320px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
 .bio-copy h2{ font-size: clamp(2.5rem, 4.8vw, 3.6rem); margin: 0.25rem 0 1rem; }
 .bio-copy h2 em{ color: var(--rust); }
 .bio-copy p{ margin-bottom: 1rem; color: var(--ink-soft); max-width: 56ch; line-height: 1.65; }
