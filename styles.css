@@ -409,6 +409,16 @@ button, input, select, textarea{ font-family: inherit; font-size: inherit; color
 .field input:focus, .field select:focus, .field textarea:focus{ border-color: var(--gold); }
 .form-note{ font-size: 0.88rem; color: var(--gold); min-height: 1.2em; }
 
+/* ---------- audio ---------- */
+
+.audio{
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    gap: 8rem;
+}
+.audio div{ flex: 1 }
+
 /* ---------- footer ---------- */
 .site-footer{ background: var(--near-black); color: rgba(239,227,200,0.78); padding: 3rem var(--pad) 2rem; }
 .footer-inner{
@@ -444,3 +454,11 @@ button, input, select, textarea{ font-family: inherit; font-size: inherit; color
 @media (max-width: 560px){
     .notes-grid{ grid-template-columns: 1fr; }
 }
+
+@media (max-width: 560px){
+    .audio{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
