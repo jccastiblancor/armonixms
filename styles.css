@@ -141,6 +141,7 @@ button, input, select, textarea{ font-family: inherit; font-size: inherit; color
     font-weight: 400;
     letter-spacing: -0.01em;
     color: var(--ink);
+    text-align: center;
 }
 .lede em{ color: var(--rust); }
 .lede .accent{ color: var(--rust); }
@@ -233,11 +234,18 @@ button, input, select, textarea{ font-family: inherit; font-size: inherit; color
     flex-direction: column;
     gap: 1.1rem;
     justify-content: center;
+    align-items: center;
 }
-.para-copy h2{ font-size: clamp(2.5rem, 5.4vw, 3.8rem); }
+.para-copy h2{ font-size: clamp(2.5rem, 5.4vw, 3.8rem); text-align: center;}
 .para-copy h2 em{ color: var(--gold); }
-.para-copy p{ max-width: 42ch; color: rgba(239,227,200,0.9); font-size: 1.08rem; line-height: 1.65; }
-.para-copy .btn{ align-self: flex-start; margin-top: 0.4rem; }
+.para-copy p{
+    max-width: 42ch;
+    color: rgba(239,227,200,0.9);
+    font-size: 1.08rem;
+    line-height: 1.65;
+    text-align: center;
+}
+.para-copy .btn{ align-self: center; margin-top: 0.4rem; }
 
 /* ---------- services ---------- */
 .services-grid{

@@ -12,6 +12,7 @@
     padding: 0.4rem 0;
 }
 .ticker-text{
+    color: var(--cream-2);
     max-width: var(--max);
     margin: 0 auto;
     display: flex;
