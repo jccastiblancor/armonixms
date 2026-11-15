@@ -61,7 +61,7 @@
     aspect-ratio: 240 / 60;   /* use your viewBox width / height */
 }
 .hero-content .logo-img{
-    height: clamp(48px, 10vw, 144px);
+    height: clamp(96px, 10vw, 144px);
 }
 .main-nav{ display: flex; gap: 1.8rem;}
 .main-nav a{
