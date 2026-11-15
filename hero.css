@@ -34,7 +34,7 @@
     align-items: center;
     gap: 1.75rem;
 }
-.hero .hero-eyebrow{ color: var(--gold); }
+.hero .hero-eyebrow{ color: var(--cream); }
 .hero-quote em{ color: var(--gold); }
 .hero .btn-ghost{ color: var(--cream); border-color: rgba(239,227,200,0.6); }
 .hero .btn-ghost:hover{ background: var(--cream); color: var(--ink); }
